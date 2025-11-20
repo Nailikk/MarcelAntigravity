@@ -46,14 +46,14 @@ const questions = [
     {
         id: 4,
         type: 'image',
-        text: 'Frage 4: Wählen Sie das Nahrungsmittel, das Marcel überleben lässt.',
+        text: 'Frage 4: Operation Kino: Am 25.10.2025 wurde ein 20x20 cm großes Objekt ins Kino geschmuggelt. Identifizieren Sie den bildlichen Beweis dieses Objekts.',
         options: [
-            { id: 'img1', src: 'https://placehold.co/300x200?text=Gesunder+Salat', text: '[Salat]', correct: false },
-            { id: 'img2', src: 'https://placehold.co/300x200?text=Pizza', text: '[Pizza]', correct: true },
-            { id: 'img3', src: 'https://placehold.co/300x200?text=Roher+Brokkoli', text: '[Brokkoli]', correct: false },
-            { id: 'img4', src: 'https://placehold.co/300x200?text=Wasser', text: '[Wasser]', correct: false } // Pizza is usually the answer
+            { id: 'img1', src: 'Fotos/Bild1.webp', text: '[Bild1]', correct: true },
+            { id: 'img2', src: 'Fotos/Bild2.jpg', text: '[Bild2]', correct: false },
+            { id: 'img3', src: 'Fotos/Bild3.jpg', text: '[Bild3]', correct: false },
+            { id: 'img4', src: 'Fotos/Bild4.jpg', text: '[Bild4]', correct: false }
         ],
-        singleSelectImage: true // Special flag for single select image question if needed, or treat as multi select with 1 correct
+        singleSelectImage: true
     },
     {
         id: 5,
