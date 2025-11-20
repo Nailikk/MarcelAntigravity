@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ZAVIV - Identitätsverifizierung</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="background-overlay"></div>
+
+    <div class="scan-line"></div>
+
+    <div class="container">
+        <header>
+            <div class="logo-area">
+                <div class="eagle-icon">🦅</div>
+                <h1>ZAVIV</h1>
+                <p>Zentrales Amt für Volljährigkeitsprüfung und Identitätsverifizierung</p>
+            </div>
+            <div class="status-bar">
+                <span>STATUS: <span id="status-text">Warten auf Eingabe...</span></span>
+                <span>SITZUNG: <span id="session-id">#8392-X</span></span>
+            </div>
+        </header>
+
+        <main id="main-content">
+            <!-- Start Screen -->
+            <section id="start-screen" class="screen active">
+                <div class="alert-box">
+                    <h2>⚠️ Identitätsverifizierung erforderlich</h2>
+                    <p>Sehr geehrter Marcel Straub,</p>
+                    <p>Aufgrund von Unregelmäßigkeiten in Ihrer Akte ist eine sofortige Überprüfung Ihrer Identität
+                        notwendig. Bitte beantworten Sie die folgenden Sicherheitsfragen wahrheitsgemäß.</p>
+                    <p><strong>Warnung:</strong> Falsche Antworten führen zur sofortigen Terminierung der Sitzung.</p>
+                </div>
+                <button id="start-btn" class="btn-primary">Verifizierung Beginnen</button>
+            </section>
+
+            <!-- Question Screen -->
+            <section id="question-screen" class="screen hidden">
+                <div class="progress-bar">
+                    <div class="progress-fill" id="progress-fill"></div>
+                </div>
+                <div class="question-box">
+                    <h3 id="question-title">Sicherheitsfrage 1/5</h3>
+                    <p id="question-text" class="question-text">Lade Frage...</p>
+
+                    <div id="answers-container" class="answers-grid">
+                        <!-- Answers will be injected here -->
+                    </div>
+
+                    <button id="submit-btn" class="btn-primary hidden">Bestätigen</button>
+                </div>
+            </section>
+
+            <!-- Success Screen -->
+            <section id="success-screen" class="screen hidden">
+                <div class="success-content">
+                    <h2>✅ Zugriff gewährt!</h2>
+                    <p>Identität erfolgreich verifiziert.</p>
+                    <div class="gift-container">
+                        <p>Ihr Belohnungs-Paket steht bereit:</p>
+                        <button id="gift-btn" class="gift-btn">
+                            🎁 Öffnen
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer>
+            <p>&copy; 2025 Ministerium für große Angelegenheiten. Alle Rechte vorbehalten.</p>
+            <button id="give-up-btn" class="btn-text">Ich gebe auf (Abbrechen)</button>
+        </footer>
+    </div>
+
+    <!-- Overlays -->
+    <div id="fail-overlay" class="fail-overlay hidden"></div>
+    <div id="confetti-container" class="confetti-container"></div>
+
+    <!-- Audio -->
+    <!-- Using placeholder sounds or browser synthesis if possible, but setup for files -->
+    <!-- Ideally we would have local files, but for now we might use simple beeps or rely on the script to generate/play sounds if possible, or just placeholders -->
+
+    <script src="script.js"></script>
+</body>
+
+</html>
