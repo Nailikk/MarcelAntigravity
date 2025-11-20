@@ -23,14 +23,14 @@ const questions = [
     {
         id: 2,
         type: 'image',
-        text: 'Frage 2: Identifizieren Sie alle Bilder, auf denen Marcel NICHT müde aussieht.',
-        // Using placeholders with text description for prototype
+        text: 'Frage 2: Welche Frisur steht Marcel gut?',
         options: [
-            { id: 'img1', src: 'https://placehold.co/300x200?text=Marcel+Schlafend', text: '[Marcel schlafend]', correct: false },
-            { id: 'img2', src: 'https://placehold.co/300x200?text=Marcel+Wach+Aber+Müde', text: '[Marcel wach aber müde]', correct: false },
-            { id: 'img3', src: 'https://placehold.co/300x200?text=Marcel+Hyperaktiv', text: '[Marcel hyperaktiv]', correct: true },
-            { id: 'img4', src: 'https://placehold.co/300x200?text=Marcel+Gähnt', text: '[Marcel gähnt]', correct: false }
-        ]
+            { id: 'img1', src: 'Fotos/Frisur1.jpg', text: '[Frisur 1]', correct: false },
+            { id: 'img2', src: 'Fotos/Frisur2.jpg', text: '[Frisur 2]', correct: true },
+            { id: 'img3', src: 'Fotos/Frisur3.jpg', text: '[Frisur 3]', correct: false },
+            { id: 'img4', src: 'Fotos/Frisur4.jpg', text: '[Frisur 4]', correct: false }
+        ],
+        singleSelectImage: true
     },
     {
         id: 3,
